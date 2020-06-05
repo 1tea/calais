@@ -14,9 +14,9 @@ var content = {
 // Buttons & Menus
 // Open Site Menu - Mobile
 var siteButton = document.querySelector("#site-nav-button");
-var siteMenu = document.querySelector("#sitemenu");
+var siteMenu = document.querySelector("#sidebar");
 siteButton.addEventListener("click", function(){
-  toggleVisible
+  toggleVisible(siteMenu);
 });
 // Open Page Menu - Mobile
 var pageButton = document.querySelector("#page-nav-button");
