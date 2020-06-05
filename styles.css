@@ -1,0 +1,296 @@
+/*     font-family: 'Caladea', serif;
+
+    font-family: 'Prata', serif; */
+
+/* General */
+
+body {
+  background-color: #588da8;
+  margin: 0;
+  font-family: 'Caladea', serif;
+}
+
+section {
+  padding: 0 5%;
+  color:white;
+}
+
+h2 {
+  /* background-color: rgba(255, 255, 255, 0.6); */
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 100%); */
+  color: white;
+  text-align: center;
+  /* color: #588da8; */
+  padding: 0.5rem 0 0.5rem 5px;
+  border-radius: 10px;
+}
+
+/* Header */
+
+.header {
+  background-image: url("images/junglepic.jpg");
+  padding:5% 0 5%;
+  letter-spacing: 2px;
+}
+
+.header-text{
+  padding: 1% 14%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Container */
+.mycontainer{
+  margin-bottom: 4rem;
+}
+
+/* NavBar */
+
+.mynavbar{
+  margin: 3%;
+  padding: 0;
+  text-align: left;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  color: white;
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 1) 100%); */
+  background: rgba(255, 255, 255, 1);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.mynavbar p{
+  display: inline-block;
+  color: #588da8;
+  margin: 0;
+  font-size: 1rem;
+}
+
+.nav-button{
+  color: #588da8;
+  border: none;
+  border-radius: 5px;
+  float:right;
+  margin: 0 5px;
+  background: none;
+  font-size: 1rem;
+  padding: 0;
+}
+
+/* -- All Menu -- */
+
+/* All Menu - Container */
+.navbar-open{
+  max-height: 90%;
+}
+
+.menu-container{
+  padding: 0;
+  text-align: center;
+  color: #588da8;
+}
+
+.menu-list{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin:0;
+}
+
+/* All Menu - Items*/
+.menu-header{
+  font-size:  1.5rem;
+  height: 10%;
+}
+
+.menu-sub-header{
+  text-decoration:underline;
+  color: black;
+  display: none;
+}
+
+.menu-item{
+  background: linear-gradient(90deg, rgba(255, 255, 255, 9) 0%, rgba(255, 255, 255, 1) 50%, rgba()rgba(255, 255, 255, 9) 100%);
+  padding: 0.5rem;
+  text-decoration: none;
+  margin: 0;
+}
+
+.menu-item:hover{
+  cursor:pointer;
+  color: blue;
+}
+
+.menu-button{
+  color: #588da8;
+  border: none;
+  border-radius: 5px;
+  margin: 0;
+  font-size: 1.5em;
+  height:10%;
+  background: none;
+  padding: auto;
+}
+
+
+/* -- Page Menu -- */
+
+/* Page Menu - Container */
+
+.page-dropup-container{
+  padding: 0;
+  text-align: center;
+  color: #588da8;
+}
+
+.page-dropup-list{
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+}
+
+/* Page Menu - Items*/
+.page-menu-header{
+  font-size:  1.5rem;
+  height: 10%;
+}
+
+.dropup-item{
+  /* background: linear-gradient(90deg, rgba(255, 255, 255, 9) 0%, rgba(255, 255, 255, 1) 50%, rgba()rgba(255, 255, 255, 9) 100%); */
+  background: rgba(255, 255, 255, 1);
+  padding: 1.5rem;
+  text-decoration: none;
+  margin: 2px 0;
+  /* border-bottom: solid 0.5px #588da8; */
+}
+
+/* Action Classes */
+.hidden{
+  display:none;
+}
+
+/* Medium screens from here! */
+@media only screen and (orientation: landscape){
+
+}
+
+/* Desktop SetUp */
+@media only screen and (min-width:1000px) {
+
+/* Desktop  General Layout*/
+  .mycontainer {
+    margin:0 5%;
+    padding:1% 5% 30px;
+    height:15%;
+  }
+  section {
+    padding: 0 5%;
+  }
+
+/* Desktop Left Sidebar */
+  .mynavbar{
+    margin: 1% 1% 0;
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    width:10%;
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%); */
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px 10px 0 0 ;
+    text-align: center;
+    font-size: 3rem;
+    padding: 0;
+  }
+  .nav-button{
+    background: none;
+    color: #588da8;
+    margin: 10% auto;
+    border: none;
+    float: none;
+    border-radius: 1px;
+  }
+
+  /* Desktop Pop Outs - (eg menus) */
+  .menu-container{
+    position: fixed;
+    border-radius: 10px;
+    left: 15%;
+    top: 5%;
+    background: rgba(255, 255, 255, 1);
+    padding: 0;
+  }
+  .menu-list{
+    margin: 5px;
+    display: inline-block;
+    font-size: 1rem;
+  }
+  .menu-sub-header{
+    display: inherit;
+  }
+/*
+  .col1{
+    position: relative;
+    left: 5%;
+    top: 10%;
+  }
+
+  .col2{
+    position: relative;
+    right: 5%;
+    top: 10%;
+  }
+    */
+  /* Desktop Right Sidebar */
+  .page-dropup-container{
+    display: inline;
+    position: fixed;
+    right:0;
+    top:0;
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 1) 100%); */
+    background: rgba(255, 255, 255, 1);
+    width: 10%;
+    height: 100%;
+    margin: 1%;
+    border-radius: 10px;
+    padding:3px;
+  }
+  .page-dropup-list{
+    margin: 0;
+  }
+  .menu-button{
+    font-size: 1rem;
+    height:auto;
+    background: none;
+    padding: none;
+    margin:0;
+  }
+  .dropup-item{
+    padding: 0;
+    margin: 0;
+  }
+  .nav-button{
+    display: none;
+  }
+  .sidebar-button{
+    display: block;
+    background: none;
+    border: none;
+    padding: 10px;
+    color: #588da8;
+    margin: 10px 0;
+    font-size: 1rem;
+    /* border-bottom: solid 0.5px #588da8; */
+  }
+  /* .group-dropup-container{
+    position: static;
+    top: 20px;
+    left: 30%;
+  } */
+}
+
+/* Small (smaller than 640px)
+Medium (641px to 1007px)
+Large (1008px and larger) */
