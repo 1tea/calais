@@ -96,6 +96,7 @@ h2 {
 
 .menu-container{
   padding: 0;
+  margin-bottom: 10px;
   text-align: center;
   color: #588da8;
 }
@@ -111,6 +112,7 @@ h2 {
 .menu-header{
   font-size:  1.5rem;
   height: 10%;
+  margin: 1rem auto;
 }
 
 .menu-sub-header{
@@ -121,7 +123,8 @@ h2 {
 
 .menu-item{
   background: linear-gradient(90deg, rgba(255, 255, 255, 9) 0%, rgba(255, 255, 255, 1) 50%, rgba()rgba(255, 255, 255, 9) 100%);
-  padding: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1.25rem;
   text-decoration: none;
   margin: 0;
 }
@@ -168,7 +171,7 @@ h2 {
 .dropup-item{
   /* background: linear-gradient(90deg, rgba(255, 255, 255, 9) 0%, rgba(255, 255, 255, 1) 50%, rgba()rgba(255, 255, 255, 9) 100%); */
   background: rgba(255, 255, 255, 1);
-  padding: 1.5rem;
+  padding: 1rem;
   text-decoration: none;
   margin: 2px 0;
   /* border-bottom: solid 0.5px #588da8; */

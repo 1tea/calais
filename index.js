@@ -1,21 +1,9 @@
-// Content Selectors
-var content = {
-  orgName: document.querySelector("#org-name"),
-  strapline: document.querySelector("#org-strapline"),
-  description: document.querySelector("#description .content"),
-  update: document.querySelector("#update .content"),
-  volunteering: document.querySelector("#volunteering .content"),
-  donating: document.querySelector("#donating .content"),
-  contact: document.querySelector("#contact .content"),
-  email: document.querySelector(".email"),
-  lastUpdated: document.querySelector("#upDateDisplay"),
-  pageMenuHeader: document.querySelector(".page-menu-header")
-}
 // Buttons & Menus
 // Open Site Menu - Mobile
 var siteButton = document.querySelector("#site-nav-button");
 var siteMenu = document.querySelector("#sidebar");
 siteButton.addEventListener("click", function(){
+  closeMenus(orgMenu,pageMenu);
   toggleVisible(siteMenu);
 });
 // Open Page Menu - Mobile
@@ -23,30 +11,35 @@ var pageButton = document.querySelector("#page-nav-button");
 var pageMenu = document.querySelector(".page-dropup-container");
 var menuButtons = document.querySelector(".page-dropup-list");
 pageButton.addEventListener("click", function() {
-  toggleVisible(pageMenu, orgMenu)
+  closeMenus(orgMenu,siteMenu);
+  toggleVisible(pageMenu);
 });
 // close menu when menu button clicked
 menuButtons.addEventListener("click", function() {
-  toggleVisible(pageMenu)
+  toggleVisible(pageMenu);
 });
+function closeMenus (menu1,menu2,menu3){
+  var m1 = menu1;
+  m1.classList.add("hidden");
+  var m2 = menu2;
+  m2.classList.add("hidden");
+}
 // Open Org Menu - Mobile
 var calaisOrgButton = document.querySelector("#org-nav-button");
 var orgMenu = document.querySelector("#org-menu");
 calaisOrgButton.addEventListener("click", function() {
-  toggleVisible(orgMenu, pageMenu)
+  closeMenus(pageMenu,siteMenu);
+  toggleVisible(orgMenu);
 });
-
-// Make dropup menus visible - Mobile only
-function toggleVisible(dropUp, otherMenu) {
-  var thing = dropUp;
-  thing.classList.toggle("hidden");
-  var other = otherMenu;
-  other.classList.add("hidden");
+// toggle menu visibility function
+function toggleVisible(menuToOpen) {
+  var thisMenu = menuToOpen;
+  thisMenu.classList.toggle("hidden");
   var navbar = document.querySelector(".mynavbar");
   navbar.classList.toggle("navbar-open");
 }
-// Make pop out (eg menu) visible - Desktop only
-function togglePopOut(target) {
+// Make pop out (eg menu) visible - Desktop only?
+function togglePopOut(target){
   var thing = target;
   thing.classList.toggle("hidden");
 }
@@ -62,9 +55,33 @@ var localOrgButton = document.querySelector("#local-sidebar-button")
 localOrgButton.addEventListener("click", function(){
 window.open("https://www.google.com/maps/d/u/0/viewer?mid=1HMMUEy_Q1vl-lafTEGMb5OgXZ20&ll=54.470538387046034%2C-3.474155608984005&z=6");
 });
+
+
+
+
+
+
+
+// Content Selectors
+var content = {
+  orgName: document.querySelector("#org-name"),
+  strapline: document.querySelector("#org-strapline"),
+  description: document.querySelector("#description .content"),
+  update: document.querySelector("#update .content"),
+  volunteering: document.querySelector("#volunteering .content"),
+  donating: document.querySelector("#donating .content"),
+  contact: document.querySelector("#contact .content"),
+  email: document.querySelector(".email"),
+  lastUpdated: document.querySelector("#upDateDisplay"),
+  pageMenuHeader: document.querySelector(".page-menu-header")
+}
+
+
+
+
+
 // Entries - Constructor
 var frontlineOrgs = [];
-
 function OrgEntry(orgName, buttonID, strapline, description, update, volunteering, donating, contact, email, lastUpdated) {
 // data
   this.name = orgName;
